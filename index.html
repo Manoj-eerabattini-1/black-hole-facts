@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Hole Fun Fact Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Black Hole Fun Fact Generator</h1>
+        <button id="generateFact">Generate Fun Fact</button>
+        <p id="factDisplay"></p>
+    </div>
+    <script>
+        const facts = [
+            "Black holes are regions in space where the gravitational pull is so strong that nothing, not even light, can escape from them.",
+            "The boundary around a black hole beyond which nothing can escape is called the event horizon.",
+            "Black holes are formed when massive stars collapse under their own gravity at the end of their life cycles.",
+            "There are three main types of black holes: stellar, supermassive, and intermediate.",
+            "Stellar black holes are formed by the gravitational collapse of a star and typically have a mass between 3 and 10 solar masses.",
+            "Supermassive black holes, found at the centers of galaxies, can have masses equivalent to billions of suns.",
+            "The closest known black hole to Earth is about 1,000 light-years away in the constellation Telescopium.",
+            "Black holes can grow by absorbing mass from their surroundings, including gas, dust, and even other stars.",
+            "Hawking radiation is theoretical radiation predicted to be emitted by black holes due to quantum effects near the event horizon.",
+            "The study of black holes has led to significant insights into the nature of gravity and the fundamental laws of physics."
+        ];
+
+        document.getElementById('generateFact').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('factDisplay').textContent = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
